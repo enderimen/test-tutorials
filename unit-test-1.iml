@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Arquillian JUnit:Release" level="project" />
+    <orderEntry type="module-library" scope="TEST">
+      <library name="JUnit4">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/junit-4.12.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/hamcrest-core-1.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="be.eliwan:jfaker-mockito:0.1" level="application" />
+    <orderEntry type="library" name="ca.seinesoftware:hamcrest-path:1.0.1" level="application" />
+    <orderEntry type="library" name="com.develhack:develhacked-lombok:0.1.5" level="application" />
+    <orderEntry type="library" name="com.revinate:assertj-json:1.2.0" level="application" />
+  </component>
+</module>
