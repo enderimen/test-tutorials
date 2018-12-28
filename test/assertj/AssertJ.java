@@ -18,17 +18,17 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
  */
 public class AssertJ {
 
-    List<String> citiesOfTurkeyList = new ArrayList<String>( Arrays.asList("Istanbul", "Bursa", "Hakkari", "Manisa") );
-    List<String> citiesOfFranceList = new ArrayList<String>( Arrays.asList("Paris", "Lyon", "Nice", "Marsilya") );
+    List<String> citiesOfTurkeyList = new ArrayList<String>( Arrays.asList( "Istanbul", "Bursa", "Hakkari", "Manisa" ) );
+    List<String> citiesOfFranceList = new ArrayList<String>( Arrays.asList( "Paris", "Lyon", "Nice", "Marsilya" ) );
 
-    List<String> mixCitiesList = new ArrayList<String>( Arrays.asList("Paris", "Lyon", "Nice","Istanbul", "Manisa") );
+    List<String> mixCitiesList = new ArrayList<String>( Arrays.asList( "Paris", "Lyon", "Nice", "Istanbul", "Manisa" ) );
 
     @Test
     public void testStrings() throws Exception {
 
         String text = "Istanbul";
 
-        assertThat(text)
+        assertThat( text )
                 .isEqualTo( "Istanbul" )    // at least one "istanbul"
                 .startsWith( "Ist" )        // may be start "Ist"
                 .endsWith( "bul" )          // may be end "bul"
@@ -39,7 +39,7 @@ public class AssertJ {
                 .containsOnlyOnce( "tan" )  // at least one "tan"
                 .describedAs( "Error message changed!" ); // error message customized
 
-        assertThat(citiesOfFranceList).have( citiesOfTurkeyList() ); // is there any city name inside of citiesOfTurkeyList in citiesOfFranceList
+        assertThat( citiesOfFranceList ).have( citiesOfTurkeyList() ); // is there any city name inside of citiesOfTurkeyList in citiesOfFranceList
     }
 
     @Test
@@ -47,15 +47,15 @@ public class AssertJ {
 
 
         /* below code
-        *  is there two city name inside citiesOfTurkeyList and three city name inside citiesOfFranceList
-        * */
+         *  is there two city name inside citiesOfTurkeyList and three city name inside citiesOfFranceList
+         * */
         assertThat( mixCitiesList )
                 .haveExactly( 2, citiesOfTurkeyList() )
                 .haveExactly( 3, citiesOfFranceList() );
     }
 
     private Condition<? super String> citiesOfTurkeyList() {
-        return new Condition<String>(  ){
+        return new Condition<String>() {
             @Override
             public boolean matches( String city ) {
                 return citiesOfTurkeyList.contains( city ); // is there
@@ -64,7 +64,7 @@ public class AssertJ {
     }
 
     private Condition<? super String> citiesOfFranceList() {
-        return new Condition<String>(  ){
+        return new Condition<String>() {
             @Override
             public boolean matches( String city ) {
                 return citiesOfFranceList.contains( city ); // is there
