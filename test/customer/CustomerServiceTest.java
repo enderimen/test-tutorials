@@ -28,10 +28,10 @@ public class CustomerServiceTest {
     @Before
     public void setUp() throws Exception {
 
-        customerService     = new CustomerService();
+        customerService = new CustomerService();
 
-        customerRepository  = Mockito.mock( CustomerRepository.class );
-        informationService  = Mockito.mock( InformationService.class );
+        customerRepository = Mockito.mock( CustomerRepository.class );
+        informationService = Mockito.mock( InformationService.class );
 
         customerService.setCustomerRepository( customerRepository );
         customerService.setInformationService( informationService );
@@ -41,7 +41,7 @@ public class CustomerServiceTest {
     @Test
     public void testCustomerSave() {
 
-        Customer customer = new Customer(123);
+        Customer customer = new Customer( 123 );
 
         customerService.saveCustomer( customer );
 
@@ -63,13 +63,13 @@ public class CustomerServiceTest {
         when using that object; We can use.
         */
 
-        CustomerRepositoryStubTest customerRepository  = new CustomerRepositoryStubTest();
+        CustomerRepositoryStubTest customerRepository = new CustomerRepositoryStubTest();
 
-        Customer customer = new Customer(123);
+        Customer customer = new Customer( 123 );
 
         customerService.saveCustomer( customer );
 
-        assertTrue(customerRepository.getCustomerList().containsValue( customer ));
+        assertTrue( customerRepository.getCustomerList().containsValue( customer ) );
     }
 
     @Test

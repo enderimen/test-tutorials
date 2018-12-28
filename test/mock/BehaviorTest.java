@@ -47,8 +47,8 @@ public class BehaviorTest {
 
         DummyCustomerService customerService = mock( DummyCustomerService.class );
 
-        verify( customerService, never()).removeCustomer( anyString() );
-        verify( customerService, never()).updateCustomer( anyString() );
+        verify( customerService, never() ).removeCustomer( anyString() );
+        verify( customerService, never() ).updateCustomer( anyString() );
     }
 
     @Test
@@ -56,8 +56,8 @@ public class BehaviorTest {
 
         DummyCustomerService customerService = mock( DummyCustomerService.class );
 
-        verify( customerService, atLeast( 1 )).addCustomer( "Istanbul" );
-        verify( customerService, atLeast( 2 )).addCustomer( "Izmir" );
+        verify( customerService, atLeast( 1 ) ).addCustomer( "Istanbul" );
+        verify( customerService, atLeast( 2 ) ).addCustomer( "Izmir" );
     }
 
     @Test
@@ -65,13 +65,13 @@ public class BehaviorTest {
 
         DummyCustomerService customerService = mock( DummyCustomerService.class );
 
-        InOrder inOrder = inOrder(customerService);
+        InOrder inOrder = inOrder( customerService );
 
         customerService.addCustomer( "Istanbul" );
         customerService.addCustomer( "Izmir" );
 
-        inOrder.verify( customerService).addCustomer( "Istanbul" ); // 1 - 2
-        inOrder.verify( customerService).addCustomer( "Izmir" );    // 2 - 1
+        inOrder.verify( customerService ).addCustomer( "Istanbul" ); // 1 - 2
+        inOrder.verify( customerService ).addCustomer( "Izmir" );    // 2 - 1
     }
 
 }
