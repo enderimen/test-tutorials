@@ -15,12 +15,12 @@ import org.junit.runners.Suite;
  * Project Name: unit-test-1
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses( {
+@Suite.SuiteClasses({
         AnnotationLifecycleTest.class,
         MailServerUnavailableException.class,
         CustomerServiceTest.class,
         CustomerRepositoryStubTest.class,
-} )
+})
 
 public class SuitTest {
 
