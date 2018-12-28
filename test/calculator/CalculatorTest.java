@@ -23,7 +23,7 @@ public class CalculatorTest {
         int num2 = 6;
 
         // Run method
-        int result = calculator.sum( num1 , num2 );
+        int result = calculator.sum( num1, num2 );
 
         // Control result
 
@@ -31,7 +31,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void minusTest() throws Exception{
+    public void minusTest() throws Exception {
 
         Calculator calculator = new Calculator();
 
@@ -48,7 +48,7 @@ public class CalculatorTest {
 
         Calculator calculator = new Calculator();
 
-        Assert.assertEquals( 2, calculator.division( 30, 15 ));
+        Assert.assertEquals( 2, calculator.division( 30, 15 ) );
 
     }
 }

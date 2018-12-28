@@ -9,15 +9,15 @@ package customer;
  */
 public class CustomerRepository {
 
-    public void saveCustomer(Customer customer) {
+    public void saveCustomer( Customer customer ) {
         System.out.println( "Customer saved!" );
     }
 
-    public void deleteCustomer(Integer customerId) {
+    public void deleteCustomer( Integer customerId ) {
         System.out.println( "Customer deleted!" );
     }
 
-    public Customer findCustomer(Integer customerId) {
+    public Customer findCustomer( Integer customerId ) {
         System.out.println( "Customer found!" );
         return null;
     }

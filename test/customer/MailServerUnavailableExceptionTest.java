@@ -31,16 +31,16 @@ public class MailServerUnavailableExceptionTest {
 
             informationService.weeklyMailSender();
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             assertTrue( ex instanceof MailServerUnavailableException );
-            assertEquals( "Mail server error",  ex.getMessage() );
+            assertEquals( "Mail server error", ex.getMessage() );
         }
     }
 
 
     // second test method
     @Test(expected = MailServerUnavailableException.class)
-    public void testExpectedException() throws Exception{
+    public void testExpectedException() throws Exception {
 
         informationService.weeklyMailSender();
     }

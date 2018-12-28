@@ -10,6 +10,6 @@ package customer;
 public class MailServerUnavailableException extends RuntimeException {
 
     public MailServerUnavailableException( String mail_server_error ) {
-        super(mail_server_error);
+        super( mail_server_error );
     }
 }

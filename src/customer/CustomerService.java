@@ -12,12 +12,12 @@ public class CustomerService {
     private CustomerRepository customerRepository;
     private InformationService informationService;
 
-    public void saveCustomer(Customer customer) {
+    public void saveCustomer( Customer customer ) {
         customerRepository.saveCustomer( customer );
         informationService.newMailSend( customer );
     }
 
-    public void deleteCustomer(Integer customerId) {
+    public void deleteCustomer( Integer customerId ) {
         customerRepository.deleteCustomer( customerId );
     }
 

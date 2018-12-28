@@ -9,12 +9,12 @@ package customer;
  */
 public class InformationService {
 
-    public void newMailSend(Customer customer) {
+    public void newMailSend( Customer customer ) {
         System.out.println( "New mail sent!" );
     }
 
     public void weeklyMailSender() {
-        throw new MailServerUnavailableException("Mail server error");
+        throw new MailServerUnavailableException( "Mail server error" );
     }
 
 }
