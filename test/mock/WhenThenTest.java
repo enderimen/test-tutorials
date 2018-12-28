@@ -20,7 +20,7 @@ public class WhenThenTest {
         String name = customerService.getName( "Ender" );
 
         when( customerService.getName( eq( "Ender" ) ) ).thenReturn( "Customer Ender" );
-        when( customerService.getName( eq( "Ender" ) ) ).thenThrow( new RuntimeException(  ));
+        when( customerService.getName( eq( "Ender" ) ) ).thenThrow( new RuntimeException() );
 
     }
 
