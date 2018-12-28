@@ -14,12 +14,12 @@ public class LombokTest {
     @Test
     public void testLombok() throws Exception {
 
-        LombokModel lombok = LombokModel.builder().name("Ender").build();
+        LombokModel lombok = LombokModel.builder().name( "lombok-deneme" ).build();
 
-        System.out.println("Name: " + lombok.getName() );
-        System.out.println("HashCode: " + lombok.hashCode() );
-        System.out.println("ToString: " + lombok.toString() );
-        System.out.println("Equals: " + lombok.equals( "Ali" ) );
+        System.out.println( "Name: " + lombok.getName() );
+        System.out.println( "HashCode: " + lombok.hashCode() );
+        System.out.println( "ToString: " + lombok.toString() );
+        System.out.println( "Equals: " + lombok.equals( "lombok" ) );
 
     }
 }
