@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class CustomerRepositoryStubTest extends CustomerRepository {
 
-    private Map<Integer, Customer> customerList = new HashMap<Integer, Customer>( );
+    private Map<Integer, Customer> customerList = new HashMap<Integer, Customer>();
 
     @Override
     public void saveCustomer( Customer customer ) {
